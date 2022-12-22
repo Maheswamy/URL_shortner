@@ -4,33 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shortly URL shortening API Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script defer src="app.js"></script>
   </head>
   <body>
-    <nav>
-      <div>hello</div>
-      <div>Features Pricing Resources</div>
-      <div>Login Sign Up</div>
+    <nav class="margin">
+      <div class="nav_margin">
+        <div class="nav_left">
+          <div><h1 class="nav_heading">Shortly</h1></div>
+          <div class="nav_link">
+            <a href="#">Features</a>
+            <a href="#"> Pricing</a>
+            <a href="#">Resources</a>
+          </div>
+        </div>
+        <div class="nav_register">
+          <a href="#" class="nav_login">Login</a>
+          <button class="sign_up">Sign Up</button>
+        </div>
+      </div>
     </nav>
-    <!-- Features
-  Pricing
-  Resources
-
-  Login
-  Sign Up
-
-  More than just shorter links
-
-  Build your brand’s recognition and get detailed insights 
-  on how your links are performing.
-
-  Get Started
+    <main>
+      <div class="hero_section margin">
+        <div class="hero_content">
+          <h1 class="hero_heading">More than just shorter links</h1>
+          <p class="hero_para">
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <button class="hero_btn">Get Started</button>
+        </div>
+        <div>
+          <img
+            src="./images/illustration-working.svg"
+            alt="hero image of lady working"
+            class="hero_img"
+          />
+        </div>
+      </div>
+    </main>
+    <section class="sreach_section">
+      <div class="sreach_placer">
+        <div class="centering_sreach">
+          <input
+            type="url"
+            name="url_input"
+            id="input_url"
+            placeholder="Shorten a link here..."
+            class="input_box"
+            maxlength="1000"
+            oninput="changeFunction()"
+            onfocus="changeFunction()"
+          />
+          <button
+            type="submit"
+            class="submit_btn"
+            value="urlnput"
+            onclick="shortUrl()"
+          >
+            Shorten It!
+          </button>
+        </div>
+      </div>
+      <div class="result_1" id="opacity1">
+        <p class="sreach_link" id="input1"></p>
+        <div>
+          <p class="sreach_result" id="result1"></p>
+          <button class="copied-btn">copy</button>
+        </div>
+      </div>
+      <div class="result_1" id="opacity2">
+        <p class="sreach_link" id="input2"></p>
+        <div>
+          <p class="sreach_result" id="result2"></p>
+          <button class="copied-btn">copy</button>
+        </div>
+      </div>
+      <div class="result_1" id="opacity3">
+        <p class="sreach_link" id="input3"></p>
+        <div>
+          <p class="sreach_result" id="result3"></p>
+          <button class="copied-btn">copy</button>
+        </div>
+      </div>
+    </section>
+    <section class="description">
+      <div class="xxx">heloo</div>
+    </section>
+    <!-- 
   
-  Shorten a link here...
-
-  Shorten It!
-
   Advanced Statistics
 
   Track how your links are performing across the web with our 

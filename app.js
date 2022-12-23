@@ -48,9 +48,28 @@ const changeFunction = function () {
   document.getElementById("opacity1").style.opacity = "0";
   document.getElementById("opacity2").style.opacity = "0";
   document.getElementById("opacity3").style.opacity = "0";
+  document.getElementById(`btn-1`).style.backgroundColor = "hsl(180, 66%, 49%)";
+  document.getElementById(`btn-1`).innerText = "Copy";
+  document.getElementById(`btn-2`).style.backgroundColor = "hsl(180, 66%, 49%)";
+  document.getElementById(`btn-2`).innerText = "Copy";
+  document.getElementById(`btn-3`).style.backgroundColor = "hsl(180, 66%, 49%)";
+  document.getElementById(`btn-3`).innerText = "Copy";
 };
 const copyURL = async function (val) {
-  let copyText = document.getElementById(`result${val}`);
-  await navigator.clipboard.writeText(copyText.innerText);
-  alert("Copied the text: " + copyText.innerText);
+  const array = [1, 2, 3];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === val) {
+      let copyText = document.getElementById(`result${array[i]}`);
+      await navigator.clipboard.writeText(copyText.innerText);
+      document.getElementById(`btn-${array[i]}`).style.backgroundColor =
+        "hsl(257, 27%, 26%)";
+
+      document.getElementById(`btn-${array[i]}`).innerText = "Copied !";
+    } else {
+      document.getElementById(`btn-${array[i]}`).style.backgroundColor =
+        "hsl(180, 66%, 49%)";
+
+      document.getElementById(`btn-${array[i]}`).innerText = "Copy";
+    }
+  }
 };

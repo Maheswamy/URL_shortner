@@ -163,8 +163,6 @@
   margin-right: 10px;
   border-radius: 10px;
   border: none;
-  color: white;
-  background-color: hsl(180, 66%, 49%);
   font-family: "Poppins", sans-serif;
 }
 
@@ -227,6 +225,14 @@ footer {
   transition: 0.3s;
 }
 #btn-1 {
+  color: white;
+  background-color: hsl(180, 66%, 49%);
+}
+#btn-2 {
+  color: white;
+  background-color: hsl(180, 66%, 49%);
+}
+#btn-3 {
   color: white;
   background-color: hsl(180, 66%, 49%);
 }

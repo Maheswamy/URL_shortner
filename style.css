@@ -174,7 +174,62 @@
   position: absolute;
   z-index: -1;
   width: 100%;
+  height: 500px;
 }
-.xxx {
-  margin: 350px 0;
+
+.bottom_img_section {
+  background-image: url("./images/bg-boost-desktop.svg");
+  height: 250px;
+  background-color: hsl(255, 11%, 22%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+.img_btn {
+  margin-left: 80px;
+}
+.centering_heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.1;
+  color: white;
+}
+
+footer {
+  background-color: hsl(255, 11%, 22%);
+  height: 30vh;
+}
+.footer_container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+.social-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.social-container a {
+  text-decoration: none;
+  color: hsl(257, 7%, 63%);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: "Poppins", sans-serif;
+}
+.links a:hover {
+  color: aqua;
+  transition: 0.3s;
+}
+#btn-1 {
+  color: white;
+  background-color: hsl(180, 66%, 49%);
+}
+.social_media img {
+  padding-left: 10px;
 }

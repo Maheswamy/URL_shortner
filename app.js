@@ -21,7 +21,6 @@ const shortUrl = function () {
   fetch(`https://api.shrtco.de/v2/shorten?url=${urlnput}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       if (data.ok) {
         result1.innerText = data.result.full_short_link;
         result2.innerText = data.result.full_short_link2;
@@ -46,4 +45,12 @@ const changeFunction = function () {
   document.querySelector("#input_url").placeholder = `Shorten a link here`;
   document.querySelector("#input_url").style.border = "none";
   document.querySelector("#input_url").style.borderColor = "transparent";
+  document.getElementById("opacity1").style.opacity = "0";
+  document.getElementById("opacity2").style.opacity = "0";
+  document.getElementById("opacity3").style.opacity = "0";
+};
+const copyURL = async function (val) {
+  let copyText = document.getElementById(`result${val}`);
+  await navigator.clipboard.writeText(copyText.innerText);
+  alert("Copied the text: " + copyText.innerText);
 };
